@@ -1,0 +1,1211 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h1>Learn Javascript</h1>
+                </section>
+				<section>
+                    <h2>Instructor</h2>
+                    <h4>Vladimir Cespedes</h4>
+                    <p>@vladwelt</p>
+                </section>
+                <section>
+                    <section>
+                        <h1>Dia 0</h1>
+                    </section>
+                    <section>
+                        <h2>Objetivos</h2>
+                        <ul>
+                            <li>Generalidades</li>
+                            <li>Diseño web</li>
+                            <li>Estructura del lenguaje</li>
+                            <li>Variables y tipos</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>GENERALIDADES</h2>
+                    </section>
+                    <section>
+                        <h2>Que es Javascript(JS)</h2>
+                        <ul>
+                            <li>JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.</li>
+                            <li>JavaScript se utiliza principalmente en el lado del cliente (client-side).</li>
+                            <li>JavaScript nos permite desarrollar paginas web dinamicas.</li>
+                        </ul>
+                        <p> Javascript se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico. <small>https://es.wikipedia.org/wiki/JavaScript</small></p>
+                    </section>
+                    <section>
+                        <h3>JavaScript es un lenguaje del lado del cliente</h3>
+                        <img  width="650" src="img/client-server.jpg"></img>
+                    </section>
+                    <section>
+                        <h2>DISEÑO WEB</h2>
+                    </section>
+                    <section data-background-transition="zoom" data-background="img/html.png" data-background-size="90vw">
+                    </section>
+                    <section>
+                        <h2>DISEÑO WEB</h2>
+                        <ul>
+                            <li class="fragment">Contenido</li>
+                            <p class="fragment">HTML</p>
+                            <li class="fragment">Presentacion</li>
+                            <p class="fragment">CSS</p>
+                            <li class="fragment">Comportamiento</li>
+                            <p class="fragment">JS</p>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Interpretado en una pagina web</h3>
+                    <pre><code class="hljs">
+    <script>
+        //alert('Hello World!');
+    </script>
+					</code></pre>
+
+                    </section>
+                    <section>
+                        <h3>Interpretado en una pagina web</h3>
+                    <pre><code class="hljs">
+    <script src="miscript.js"></script>
+					</code></pre>
+                    <pre><code class="hljs">
+    // miscript.js
+    //alert('Hello World!');
+					</code></pre>
+
+
+                    </section>
+                    <section>
+                        <h2>A Desarrollar</h2>
+                        <h4>Ejecucion del codigo</h4>
+                        <table>
+                            <tbody>
+                                <tr><th>Interpretado en la pagina web</th></tr>
+                                <tr><th>Interpretado en la consola</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>ESTRUCTURA DEL LENGUAJE</h2>
+                        <table class="fragment">
+                            <tbody>
+                                <tr><th>Comentarios</th></tr>
+                                <tr><th>Literales</th></tr>
+                                <tr><th>Identificadores</th></tr>
+                                <tr><th>Punto y coma (;)</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Comentarios</h3>
+                        <p>Dos formas de comentar</p>
+                        <pre><code class="hljs">
+        // Comentario de una linea
+
+        /* Comentario 
+            de 
+            muchas 
+            lineas
+        */
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Literales</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                <th>Números enteros:</th><th>192</th>
+                                </tr>
+                                <tr>
+                                <th>Números flotantes:</th><th>  1.4</th>
+                                </tr>
+                                <tr>
+                                <th>Cadenas de texto:</th><th>"Hola mundo", 'Hola mundo'</th>
+                                </tr>
+                                <tr>
+                                <th>Valores lógicos:</th><th>true, false</th>
+                                </tr>
+                                <tr>
+                                <th>Expresiones regulares </th><th>  /[A-Za-z]/</th>
+                                </tr>
+                                <tr>
+                                <th>Valor nulo:</th><th> null</th>
+                                </tr>
+                                <tr>
+                                <th>Valor indefinido:</th><th>   undefined</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Identificadores</h2>
+                        <p>Los identificadores en javascript comienzan con una letra, una barra baja (_), o un caracter de dolar ($); seguidos por letras, números, barras bajas, y caracteres de dolar, por ejemplo:</p>
+                        <pre><code class="hljs">
+        var nombre;
+        var _nombre;
+        var $nombre;
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Punto y coma (;)</h2>
+                        <p>Es posible el uso del caracter (;) para la separación de sentencias, sin embargo, esta tambien puede omitirse si estos están en diferentes lineas</p>
+                        
+                        <p>Los interpretes de JavaScript, tratan a los fines de linea como final de una sentencia, si y solo si, la siguiente sentencia no puede interpretarse como continuación de la anterior.</p>
+                        <p>
+                        Pueden verse varios criterios para tomar una decisión.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>VARIABLES</h2>
+                    </section>
+                    <section>
+                        <h2>VARIABLES</h2>
+                        <h4>Una variable es un contenedor para un valor.</h4>
+                        <p>El nombre que se refiere a una variable es llamada identificador</p>
+                    </section>
+                    <section>
+                        <h2>Palabras Reservadas</h2>
+                        <p>Algunas palabras reservadas que no podemos usar:</p>
+                        <pre><code class="hljs">
+            null true false break do instanceof typeof
+            case else new var catch finally return void
+            continue for switch while debugger function
+            this with default if throw delete in try
+            class enum extends super const export import
+
+            implements let private public yield
+            interface package protected static
+                        </code></pre>
+                        <p>No es necesario memorizar estas palabras, cuando las usemos incorrectamente, el programa generara SyntaxError exception.</p>
+                    </section>
+                    <section>
+                        <h2>VALORES Y TIPOS</h2>
+                    </section>
+                    <section>
+                        <h2>VALORES</h2>
+                        <p>Un valor representa el <strong>dato mas basico</strong> que nosotros podemos dar con un valor.</p>
+                        <h2>TIPO</h2>
+                        <p>Un tipo es un conjunto de valores de datos y hay exactamente 6 tipos.</p>
+                    </section>
+                    <section>
+                        <h3>Hay 5 tipos primitivos(non-Object)</h3>
+                        <table>
+                            <tbody>
+                                <tr><th>Number</th><th>.33 , -3.14, 011, 7e-2, -Infinity, NaN</th></tr>
+                                <tr><th>Boolean</th><th>true, false</th></tr>
+                                <tr><th>String</th><th>"", "Hello world!", "\n", "\"", 'w Single Quotes'</th></tr>
+                                <tr><th>Null</th><th>null</th></tr>
+                                <tr><th>Undefined</th><th>undefined</th></tr>
+                            </tbody>
+                        </table>
+                        <p>Cualquier valor de esta tabla, es llamado valor primitivo.</p>
+                    </section>
+                    <section>
+                        <h3>Y hay 1, el tipo objeto</h3>
+                        <pre><code class="hljs">
+    var miObjeto = {
+        atributo1 : "atributo 1",
+        atributo2 : "atributo 2",
+    }
+    var x1 = new Object();    // A new Object object
+    var x2 = new String();    // A new String object
+    var x3 = new Number();    // A new Number object
+    var x4 = new Boolean()    // A new Boolean object
+    var x5 = new Array();     // A new Array object
+    var x6 = new RegExp();    // A new RegExp object
+    var x7 = new Function();  // A new Function object
+    var x8 = new Date();      // A new Date object
+
+                        </code></pre>
+                        <p>Any value of this type is a reference to some “object”;
+                        sometimes we would simply call such value an object</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>DIA 1</h2>
+                    </section>
+                    <section>
+                        <h2>Objetivos</h2>
+                        <ul>
+                            <li>Manipulacion de Datos</li>
+                            <li>Condicionales</li>
+                            <li>Iteradores</li>
+                            <li>Objetos</li>
+                            <li>Retos</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Manipulacion de datos</h2>
+                    </section>
+                    <section>
+                        <h2>VAR</h2>
+                        <pre><code  class="hljs" data-trim contenteditable>
+    // var - palabra clave
+    var numero = 3;
+    var cadena = "mi cadena."
+    var visible = true;
+    var desconocido; // Undefined
+    var conocido = null;
+    var instructor = {
+        nombre : "Vladimir",
+        apellido : "Cespedes",
+        edad : "Desconocida",
+    }
+                        </code></pre>
+                        <p>Palabra clave para la declaración de una variable.</p>
+                    </section>
+                    <section>
+                        <h2>Number</h2>
+                        <h4>NaN</h4>
+                        <p>El valor NaN es un numero que es el resultado de una operacion que no puede producir un resultado normal.
+                        NaN no es igual a cualquier valor, incluyendo el mismo. Podemos detectar NaN con la funcion isNaN(Number).</p>
+                        <h4>Infinity</h4>
+                        <p>EL valor Infinity representa todos los valores mas grandes que 1.79769313486231570e+308.</p>
+                    </section>
+                    <section>
+                        <h2>Math</h2>
+                        <p>Math es el objeto que concentra multiples constantes y funciones matematicas.</p>
+                        <p>Mas referencia a la <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">documentacion de Math</a>.</p>
+                    </section>
+                    <section>
+                        <h2>Cadenas de Texto</h2>
+                        <p>Se utilizan para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor a la variable, se encierra el valor entre comillas dobles o simples, para delimitar su comienzo y su final:</p>
+                        <pre><code  class="hljs" data-trim contenteditable>
+// Ejemplo de cadenas de texto
+    var mensaje = "Este curso esta bueno!";
+    var mensaje_nuevo = 'Ahora usando comillas simples';
+    var texto1 = "Una frase con 'comillas simples' dentro";
+    var texto2 = 'Una frase con "comillas dobles" dentro';
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>Escapadores</h3>
+                        <p style="font-size: 20px;">Existen otros caracteres que son difíciles de incluir en una variable de texto (tabulador, ENTER, etc.) Para resolver estos problemas, JavaScript define un mecanismo para incluir de forma sencilla caracteres especiales y problemáticos dentro de una cadena de texto.</p>
+                        <table style="font-size : 25px;">
+                            <tbody>
+                                <tr><th>\O      </th><th>The NULL character</th></tr>
+                                <tr><th>\b      </th><th>Backspace</th></tr>
+                                <tr><th>\t      </th><th>Horizontal tab</th></tr>
+                                <tr><th>\n      </th><th>Newline</th></tr>
+                                <tr><th>\v      </th><th>Vertical tab</th></tr>
+                                <tr><th>\f      </th><th>Form feed</th></tr>
+                                <tr><th>\r      </th><th>Carriage return</th></tr>
+                                <tr><th>\"      </th><th>Double quote</th></tr>
+                                <tr><th>\'      </th><th>Apostrophe or single quote</th></tr>
+                                <tr><th>\\      </th><th>Backslash</th></tr>
+                                <tr><th>\x[XX]  </th><th>The Latin-1</th></tr>
+                                <tr><th>\u[XXXX]</th><th>The Unicode character</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Manipulacion de Cadenas</h3>
+                        <pre><code  class="hljs" data-trim contenteditable>
+var s = "hello, world"
+s.charAt(0)          // => "h"
+s.charAt(s.length-1) // => "d"
+s.substring(1,4)     // => "ell"
+s.slice(1,4)         // => "ell"
+s.slice(-3)          // => "rld"
+s.indexOf("l")       // => 2
+s.lastIndexOf("l")   // => 10
+s.indexOf("l", 3)    // => 3
+s.split(", ")        // => ["hello", "world"]
+s.replace("h", "H")  // => "Hello, world"
+s.toUpperCase()      // => "HELLO, WORLD"
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>Manipulacion de valores logicos</h3>
+                        <h4>True y False</h4>
+                        <p>Son tambien falsos los siguientes valores</p>
+                        <ul>
+                            <li>Undefined</li>
+                            <li>0</li>
+                            <li>NaN</li>
+                            <li>null</li>
+                            <li>-0</li>
+                            <li>"" or ''</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Valor nulo y valor indefinido</h3>
+                        <p>Representan la ausencia de un valor en una variable o en el retorno de una funcion.</p>
+                        <div style="font-size: 24px;">
+                            <p>
+                            (nombre es undefined)
+                            </p>
+                            <p>
+                            Programador: ¿qué es nombre?
+                            </p>
+                            <p>
+                            Javascript: ¿nombre? ¿qué es un  nombre? No sé de qué hablas, ni siquiera has mencionado nombre antes. ¿No te referirás a otro lenguaje?
+                            </p>
+                            <p>
+                            (nombre = null)
+                            </p>
+                            <p>
+                            Programador: ¿qué es nombre?
+                            </p>
+                            <p>
+                            Javascript: no lo sé
+                            </p>
+                        </div>
+                        <p>Una de las mejores respuestas en <a href="http://stackoverflow.com/questions/801032/why-is-null-an-object-and-whats-the-difference-between-null-and-undefined">Stackoverflow</a></p>
+                    </section>
+                    <section>
+                        <h2>Condicionales</h2>
+                        <table>
+                            <tbody>
+                                <tr><th>if</th></tr>
+                                <tr><th>else if</th></tr>
+                                <tr><th>switch</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>if</h2>
+                        <pre><code  class="hljs" data-trim contenteditable>
+if (expresion) {
+    sentencias
+}
+                        </code></pre>
+                        <pre><code  class="hljs" data-trim contenteditable>
+if (expresion) {
+    sentencias
+} else {
+    sentencias
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>else if</h2>
+                        <pre><code  class="hljs" data-trim contenteditable>
+if(expresion) {
+    sentencias
+} else if(otra expresion) {
+    sentencias
+} else {
+    sentencias
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>switch</h2>
+                        <pre><code  class="hljs" data-trim contenteditable>
+switch(expresion) {
+    case 1:
+        sentencias
+        break
+    case n:
+        sentencias
+        break
+    default:
+        sentencias
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>A Desarrollar</h2>
+                        <h4>Ejercicios</h4>
+                        <table>
+                            <tbody>
+                                <tr><th>Que pida un número y diga si es par o impar.</th></tr>
+                                <tr><th>Que pida un número del 1 al 7 y diga el día de la semana correspondiente.</th></tr>
+                                <tr><th>Que pida un número y diga si es positivo y negativo.</th></tr>
+
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Iteradores</h2>
+                        <table>
+                            <tbody>
+                                <tr><td>while</td></tr>
+                                <tr><td>do while</td></tr>
+                                <tr><td>for</td></tr>
+                                <tr><td>for in</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>while</h2>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+while(expresion){
+    sentencias
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>do while</h2>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+do {
+    sentencias
+while(expresion)
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>for</h2>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+for(inicializacion;evaluador;incrementador){
+    sentencias
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>for in</h2>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+for(variable in coleccion){
+    sentencias
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>A Desarrollar</h2>
+                        <h4>Ejercicios</h4>
+                        <table>
+                            <tbody>
+                                <tr><th>Que muestre los números del 1 al 100.</th></tr>
+                                <tr><th>Que muestre los números pares que haya del 1 al 100.</th></tr>
+                                <tr><th>Que imprima la suma de todos los números que van del 1 a un numero determinado.</th></tr>
+                                <tr><th>Que pida dos números y sume todos los números que van desde el primero al segundo. Se debe controlar que los valores son correctos.</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Objetos</h2>
+                        <p>Un objeto es un coleccion de propiedades</p>
+                        <p>Una propiedad tiene un nombre y un valor</p>
+                    </section>
+                    <section>
+                        <h2>Objecto</h2>
+                        <p>El <strong>nombre de una propiedad</strong> es llamado clave, entoces <strong>un objeto</strong>
+                        puede ser considerado como <span class="fragment highlight-blue">una coleccion de clave-valor</span>.</p>
+                    </section>
+                    <section>
+                        <h2>Objeto</h2>
+                        <p>Un objeto en JavaScript puede ser definido de 3 maneras:</p>
+                        <table>
+                            <tbody>
+                                <tr><td>Definicion literal.</td></tr>
+                                <tr><td>Instanciación de clases.</td></tr>
+                                <tr><td>Creación a partir de un prototipo.</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Definición literal</h2>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var pais = {
+    nombre : "Bolivia",
+    departamentos : ["Cochabamba", "La paz", "Santa Cruz"],
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Instanciación de clases</h2>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var primerObjeto =new Object();
+var cadena = new String('qwerty');
+var numero = new Number(2);
+var booleano = new Boolean();
+var secuencia = new Array();
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Prototipos</h2>
+                        <p>Un prototipo un objeto asociado al objeto que se esta definiendo, y del cual va a heredar propiedades.</p>
+                        <p>Es establecido cuando el objeto es creado.</p>
+                        <p>Puede accederse a el desde la variable prototype.</p>
+                    </section>
+                    <section>
+                        <h2>Prototipos</h2>
+                        <p>Se usa para agregar funciones a una definición incluso despues de haber declarado alguna instancia.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+a=new String('javascript');
+String.prototype.saludar=function(){
+    return 'hola Javascript!'
+}
+console.log(a.saludar());
+                        </code></pre>
+                        <p>Esto no se considera una practica recomendada. Para mas información <a href="http://stackoverflow.com/questions/12260375/javascript-overwriting-%20%20%20%20functions-prototype-bad-practice">Stackoverflow</a>.</p>
+                    </section>
+                    <section>
+                        <h2>Prototipos como herencia</h2>
+                        <p>Tambien puede servir para realizar herencia entre objetos.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+function A(){
+    this.a=100
+    this.x=function(){
+        return this.a
+}}
+function B(){this.b=100}
+B.prototype=new A()
+b=new B()
+console.log(b.x())
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Object.create</h2>
+                        <p>Construye un nuevo objeto a partir de un prototipo establecido.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+function A(){
+    this.f=function(){return 'asdf'}
+}
+a=new A()
+b=Object.create(a)
+console.log(b.f())
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Referencia</h2>
+                        <p>Los objetos son pasados por referencia, nunca son copiados</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var persona = {
+    nickname : "Vlady",
+}
+var x = persona;
+x.nickname = 'juanito';
+var apodo = persona.nickname;
+console.log(apodo);
+// nickname es 'juanito' porque x y persona
+// son referencias al mismo objeto.
+
+var a = {}, b = {}, c = {};
+// a, b y c son referenciados a 
+// diferentes objetos vacios.
+
+a = b = c = {};
+// a, b y c son refenciados a el
+// mismo objeto vacio.
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Retos</h2>
+                        <ul>
+                            <li>Siempre 7</li>
+                            <li>Que calcule la suma de los cuadrados de los 100 primeros números.</li>
+                            <li>Que escriba los primeros 25 dígitos de la sucesión de Fibonacci.</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>DIA 2 y 3</h2>
+                    </section>
+                    <section>
+                        <h2>Objetivos</h2>
+                        <ul>
+                            <li>Funciones</li>
+                            <li>Clases</li>
+                            <li>JSON</li>
+                            <li>Retos</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Funciones</h2>
+                        <p>Lo <strong>mejor de JavaScript</strong> es la implementación de las funciones.</p>
+                        <p>Una función encierra un conjunto de sentencias.</p>
+                        <p>Las funciones son la unidad modular fundamental de JavaScript. Se utilizan para la reutilización de código, ocultación de información, y la composición.</p>
+                        <p>Las funciones se utilizan para especificar el comportamiento de los objetos. En general, el arte de la programación es la factorización de un conjunto de requisitos en un conjunto de funciones y estructuras de datos.
+                        </p>
+                    </section>
+                    <section>
+                        <h2>Funciones</h2>
+                        <p>Las funciones se declaran con la palabra reservada function.</p>
+                        <img  width="650" src="img/function.png"></img>
+                    </section>
+                    <section>
+                        <h2>Asignación</h2>
+                        <p>Una función puede ser asignada a una variable.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var f = function(x) {
+    console.log(x)
+}
+f(10);
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Funciones como parametros</h2>
+                        <p>Como una función puede ser asignada a una variable, es posible que una función reciba otras funciones como parte de sus parametros.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+function f(x,g){
+    return g(x)
+}
+ 
+var a = f(2,function(x){return x*3})
+console.log(a) // 6
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Autoinvocación</h2>
+                        <p>Ademas una función puede definirse de forma anonima, ademas de ejecutarse en la misma sentencia de su definición.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var a=(function(x,y){
+    return x+y
+}(1,2))
+
+console.log(a) // 3
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Funciones internas</h2>
+                        <p>Otra caracteristica importante sobre las funciones en JavaScript, es que puede definirse una función dentro de otra función.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+function a(){
+    var x=10
+    function b(){
+        return x+1
+    }
+    return b()
+}
+console.log(a())
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>TOOLS</h2>
+                        <h3>Date</h3>
+                        <p><strong>Date</strong> es el objeto utilizado para la representación de fechas.</p>
+                        <p>Internamente, esta representación es un número que representa una cuenta de los milisegundos transcurridos desde la fecha: 1 de enero de 1970.</p>
+                        <p>Pueden verse mas sobre los sistema de tiempo en: <a href="https://en.wikipedia.org/wiki/System_time">System Time en Wikipedia</a>.</p>
+                    </section>
+                    <section>
+                        <h2>A Desarrollar</h2>
+                        <h4>Ejercicios</h4>
+                        <table>
+                            <tbody>
+                                <tr><th>Operaciones matematicas</th></tr>
+                                <tr><th>Invertir un String</th></tr>
+                                <tr><th>Que escriba la sucesión de Fibonacci, hasta un numero n,  utilizar recursividad.</th></tr>
+                                <tr><th>Que detecte si un número es primo, utilizar recursividad.</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Varargs</h2>
+                        <p>Al igual que en el lenguaje de programación Java, una función puede ser invocada con mas parametros de los que han sido definidos, o inclusive con menos.</p>
+                        <p>Todas los parametros que han sido enviados a una función pueden ser accedidos a esta por el arreglo objeto "arguments".</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+function a(){
+    console.log(arguments)
+}
+ 
+a(1,2,3,4,5,6)
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Hoisting</h2>
+                        <p>Las variables en JavaScript, tienen ambito de función, esto significa que todas las variables declaradas en una función son visibles a travez del cuerpo de la función. Esto significa que las variables son incluso visibles antes de ser declaradas.</p>
+                        <p>Referencias a <a href="http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html">adequatelygood</a></p>
+                    </section>
+                    <section>
+                        <h2>Hoisting</h2>
+                        <p>Ejemplos:</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var a='asdf';
+(function b(){
+    console.log(a)
+})() // asdf
+                        </code></pre>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var a='asdf';
+(function b(){
+    console.log(a)
+    var a='qwer'
+})() // undefined
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>scope</h2>
+                        <p>Ambito(scope) de aplicación en un lenguaje de programación controla la visibilidad y la vida útil de las variables y parámetros. este es un servicio importante para el programador, ya que reduce las colisiones de nombres y proporciona gestión automática de memoria:</p>
+                    </section>
+                    <section>
+                        <h2>scope</h2>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var funcion1 = function() {
+    var a = 3, b = 5;
+    var funcion2 = function() {
+        var b = 7, c = 11;
+        // En este punto, a es 3, b es 7, y c e 11
+        a += b + c;
+        // En este punto, a es 21, b es 7, y c es 11
+    };
+    // En este punto, a es 3, b es 5, y c no esta definido
+    funcion2();
+    // En este punto, a es 21, b es 5
+};
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Closure</h2>
+                        <p>Las buenas noticias sobre el alcance es que las funciones internas tienen acceso a los parámetros y variables de las funciones que están definidas dentro (con la excepción de <span class="fragment highlight-blue">this</span> y <span class="fragment highlight-blue">arguments</span>).</p>
+                    </section>
+                    <section>
+                        <h2>Closure</h2>
+                        <p>Ejemplo</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+var myObjeto = function () {
+    var valor = 0;
+    return {
+        incrementar: function (inc) {
+            valor += typeof inc === 'number' ? inc : 1;
+        },
+        getValue: function () {
+            return valor;
+        }
+    };
+}();
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Clases</h2>
+                        <p>Una clase en JavaScript es una colección de objetos que heredan propiedades de un mismo prototipo.</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+function A(){
+    this.a=10
+    this.b=11
+}
+a=new A()
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Tools</h2>
+                        <h3>instanceof</h3>
+                        <p>Verifica si un objeto es instancia de algún prototipo.</p>
+                        <h3>typeof</h3>
+                        <p>Retorna una cadena indicando el tipo de dato que tiene una variable.</p>
+                    </section>
+                    <section>
+                        <h2>A Desarrollar</h2>
+                        <h4>Ejercicios</h4>
+                        <table>
+                            <tbody>
+                                <tr><th>Crear un objeto persona, que muetre su nombre completo.</th></tr>
+                                <tr><th>Editar el objeto persona, y verificar que su carnet de identidad sea valido.</th></tr>
+                                <tr><th>Crear un objeto empresa, que pueda agregar empleados, calcular la media de salarios.</th></tr>
+                                <tr><th>Crear un objeto biblioteca, que pueda agregar libros, eliminar libros, prestar libros,saber el estado del libro.</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h1>JSON</h1>
+                    </section>
+                    <section>
+                        <h2>JSON</h2>
+                        <p>JSON, acrónimo de JavaScript Object Notation, es un formato de texto ligero para el intercambio de datos. JSON es un subconjunto de la notación literal de objetos de JavaScript aunque hoy, debido a su amplia adopción como alternativa a XML, se considera un formato de lenguaje independiente.</p>
+                        <p>Referencia: <a href="https://es.wikipedia.org/wiki/JSON">JSON en Wikipedia</a></p>
+                    </section>
+                    <section>
+                        <h2>JSON</h2>
+                        <p>Ejemplo</p>
+                        <pre style="font-size: 24px;"><code  class="hljs" data-trim contenteditable>
+{"menu": {
+    "id": "file",
+    "value": "File",
+    "popup": {
+        "menuitem": [
+            {"value": "New", "onclick": "CreateNew()"},
+            {"value": "Open", "onclick": "Open()"},
+            {"value": "Close", "onclick": "Close()"}
+        ]
+        }
+    }
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>Transformación</h3>
+                        <p>Existen dos métodos para la transformación entre JSON y Objetos de JavaScript.</p>
+                        <p><strong>JSON.stringify</strong> <span class="fragment highlight-blue">OBJECT -> JSON</span></p>
+                        <p>Retorna una cadena en formato JSON correspondiente a un valor especificado.</p>
+                        <p><strong>JSON.parse</strong> <span class="fragment highlight-blue">JSON -> OBJETO</span></p>
+                        <p>Interpreta una cadena en formato JSON a su objeto correspondiente.</p>
+                    </section>
+                    <section>
+                        <h2>Retos</h2>
+                        <ul>
+                            <li>Crear objeto persona, ingresar la fecha y calcular la edad.</li>
+                            <li>Un banco tiene n clientes que pueden hacer depósitos y extracciones. También el banco requiere que al final del día calcule la cantidad de dinero que hay depositada.</li>
+                            <li>Crear un objeto empresa y que pueda agregar empleados con diferentes cargos jerarquicos y que pueda definir su salario segun al cargo.</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>DIA 4</h2>
+                    </section>
+                    <section>
+                        <h2>Objetivos</h2>
+                        <ul>
+                            <li>Window</li>
+                            <li>DOM</li>
+                            <li>Retos</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Window</h2>
+                        <p>The objeto Window es el mas alto nivel de objetos JavaScript que corresponden a la ventana del navegador.</p>
+                        <p>Mas Referencia <a href="https://developer.mozilla.org/es/docs/Web/API/Window">Window Object</a></p>
+                    </section>
+                    <section>
+                        <h2>API Window</h2>
+                        <table>
+                            <tbody>
+                                <tr><th>location</th><th>Objeto que representa la url actual.</th></tr>
+                                <tr><th>history</th><th>back - forward - go</th></tr>
+                                <tr><th>navigator</th><th>Provee información relacionada al navegador.</th></tr>
+                                <tr><th>screen</th><th>Provee información relacionada a la resolución de pantalla.</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Cuadros de dialogo</h2>
+                        <pre style="font-size: 30px;"><code  class="hljs" data-trim contenteditable>
+// alerta
+alert(mensaje)
+// ventana de confirmacion
+res=confirm(mensaje)
+// ventana de dialogo
+res=prompt(mensaje,valor)
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Timers</h2>
+                        <p>Son funciones que son invocadas despues de un tiempo determinado.</p>
+                        <table>
+                            <tbody>
+                                <tr><th>setTimeout()</th><th>Planifica la invocación despues de un tiempo determinado.</th></tr>
+                                <tr><th>setInterval()</th><th>Planifica la invocación despues de un intervalo.</th></tr>
+                                <tr><th>clearTimeout() y clearInterval()</th><th>Limpia tareas puestas en el planificador.</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Ejemplos</h3>
+                        <pre style="font-size: 30px;"><code  class="hljs" data-trim contenteditable>
+setTimeout(function(){
+    alert('asdf')
+},8000);
+                        </code></pre>
+                        <pre style="font-size: 30px;"><code  class="hljs" data-trim contenteditable>
+setInterval(function(){
+    alert('asdf')
+},3000);
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>DOM</h2>
+                        <p>DOM (Document Object Model), es una <span class="fragment highlight-blue">interfaz de programación</span> para documentos en HTML y XML.</p>
+                    </section>
+                    <section>
+                        <h2>DOM</h2>
+                        <p>Provee una representación estructurada del documento (en forma de una <span class="fragment highlight-blue">estrucura de arbol</span>).</p>
+                    </section>
+                    <section>
+                        <h2>DOM</h2>
+                        <p>Ademas define una manera para que la estructura pueda ser accedida, ademas de poder modificar su estilo o contenido.</p>
+                    </section>
+                    <section>
+                        <h2>DOM</h2>
+                        <p>DOM permite un acceso a la estructura de una página HTML mediante el mapeo de los elementos de esta página en un árbol de nodos. Cada elemento se convierte en un nodo y cada porción de texto en un nodo de texto.</p>
+                    </section>
+                    <section>
+                        <h2>API DOM</h2>
+                        <p>La manipulación del contenido en el navegador depende de un conjunto de funciones y atributos que son provistos por el objeto <span class="fragment highlight-blue">document</span>, que es de tipo HTMLDocument.</p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document">Referencia (Document)</a>
+                        <br/>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Referencia (Element)</a>
+                    </section>
+                    <section>
+                        <h2>Representación de un documento HTML</h2>
+                        <img  width="1000" src="img/dom.svg"></img>
+                    </section>
+                    <section>
+                        <h2>Notación de navegación</h2>
+                        <img  width="1000" src="img/notacion.svg"></img>
+                    </section>
+                    <section>
+                        <h2>Notación de XML</h2>
+                        <img  width="1000" src="img/xml.svg"></img>
+                    </section>
+                    <section>
+                        <h2>Jerarquia de clases DOM</h2>
+                        <img  width="1000" src="img/dom1.png"></img>
+                    </section>
+                    <section>
+                        <h2>Selectores</h2>
+                        <table>
+                            <tbody>
+                                <tr><th>document.getElementById(id)</th></tr>
+                                <tr><th>document.getElementsByName(name)</th></tr>
+                                <tr><th>document.getElementsByTagName(tagname)</th></tr>
+                                <tr><th>document.getElementsByClassName(classname)</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Selectores CSS</h2>
+                        <table>
+                            <tbody>
+                                <tr><th>document.querySelector(selector)</th></tr>
+                                <tr><th>document.querySelectorAll(selector)</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Recorrido</h2>
+                        <p>A partir de un nodo seleccionado, se puede recorrer a nodos cercanos y lejanos.</p>
+                        <table>
+                            <tbody>
+                                <tr><th>parentNode</th></tr>
+                                <tr><th>childNodes</th></tr>
+                                <tr><th>firstChild</th></tr>
+                                <tr><th>lastChild</th></tr>
+                                <tr><th>nextSibling</th></tr>
+                                <tr><th>previousSibling</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Mas Recorrido</h2>
+                        <table>
+                            <tbody>
+                                <tr><th>children</th></tr>
+                                <tr><th>firstElementChild</th></tr>
+                                <tr><th>lastElementChild</th></tr>
+                                <tr><th>nextElementSibling</th></tr>
+                                <tr><th>previousElementSibling</th></tr>
+                                <tr><th>childElementCount</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Atributos</h2>
+                        <p>Existen metodos especificos para el acceso a los atributos de un elemento.</p>
+                        <table>
+                            <tbody>
+                                <tr><th>getAttribute</th></tr>
+                                <tr><th>setAttribute</th></tr>
+                                <tr><th>hasAttribute</th></tr>
+                                <tr><th>removeAttribute</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Manipulación del contenido</h2>
+                        <table>
+                            <tbody>
+                                <tr><th>innerHTML</th></tr>
+                                <tr><th>outerHTML</th></tr>
+                                <tr><th>
+                                    <p>insertAdjacentHTML</p>
+                                    <ul>
+                                        <li>beforebegin</li>
+                                        <li>afterbegin</li>
+                                        <li>beforeend</li>
+                                        <li>afterend</li>
+                                    </ul>
+                                </th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Manipulación del contenido</h2>
+                        <p>Para acceder al contenido de un elemento, existen dos metodos, dependiendo si se trata como HTML Element o Node.</p>
+                        <table>
+                            <tbody>
+                                <tr><th>textContext</th><th>para HTMLElement</th></tr>
+                                <tr><th>data</th><th>para node</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Creacion de nodos</h2>
+                        <p>Existen tres metodos para la creación de nuevos nodos.</p>
+                        <table>
+                            <tbody>
+                                <tr><th>createElement</th></tr>
+                                <tr><th>createTextNode</th></tr>
+                                <tr><th>cloneNode</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Manipulación de elementos</h2>
+                        <p>Se poseen varias funciones para la manipulacion de nodos en el arbol.</p>
+                        <table>
+                            <tbody>
+                                <tr><th>appendChild</th></tr>
+                                <tr><th>insertBefore</th></tr>
+                                <tr><th>removeChild</th></tr>
+                                <tr><th>replaceChild</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Formularios</h2>
+                        <p>Los formularios pueden accederse como cualquier otro elemento, ademas existe el parametro 'document.forms'</p>
+                        <p>Estos pueden ser accedidos por sus atributos name e id.</p>
+                        <p>Para acceder a los elementos del formulario, se utiliza la variable 'elements'.</p>
+                        <pre style="font-size: 35px;"><code  class="hljs" data-trim contenteditable>
+document.forms.name.element.input
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h2>Estilos</h2>
+                        <p>Para la modificacion de propiedades de hoja de estilo, se tiene la la propiedad 'style'.</p>
+                        <p>Ademas que es posible estructurar un documento de forma que puedan cambiarse su clases y estos reflejen cambios en la presentación de documentos.</p>
+                        <pre style="font-size: 35px;"><code  class="hljs" data-trim contenteditable>
+document.querySelector('selector').style
+                        </code></pre>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>DIA 5</h2>
+                    </section>
+                    <section>
+                        <h2>Objetivos</h2>
+                        <ul>
+                            <li>Eventos</li>
+                            <li>AJAX</li>
+                            <li>Retos</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Eventos</h2>
+                        <p>Un evento es algo que desencadena una acción especifica en el navegador.</p>
+                        <p>Usualmente un evento ocurre cuando un usuario:</p>
+                        <table>
+                            <tbody>
+                                <tr><th>Device-dependent input events.</th><th>Teclado, raton, dispositivos Touch.</th></tr>
+                                <tr><th>Device-independent input events</th><th>Click.</th></tr>
+                                <tr><th>User interface events</th><th>Foco, cambios, submit.</th></tr>
+                                <tr><th>State-change events</th><th>Cambio de estado en general.</th></tr>
+                                <tr><th>API-specific events</th><th>DnD, Players.</th></tr>
+                                <tr><th>Timers and error handlers</th><th>Temporizadores, errores.</th></tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section>
+                        <h2>Captura de eventos</h2>
+                        <p>Existen dos métodos para el registro de eventos.</p>
+                        <pre style="font-size: 35px;"><code  class="hljs" data-trim contenteditable>
+b.onclick=function(){console.log('asdf')}
+
+b.addEventListener('click',function(){
+    console.log('asd')
+},false)
+                        </code></pre>
+                        <a href="http://www.quirksmode.org/js/events_mouse.html">Mas informacion</a>
+                    </section>
+                    <section>
+                        <h2>Ajax</h2>
+                        <p>AJAX (Asynchronous JavaScript And XML), es una técnica de desarrollo web para crear aplicaciones interactivas. De esta forma es posible realizar cambios sobre las páginas sin necesidad de recargarlas, mejorando la interactividad, velocidad y usabilidad en las aplicaciones.</p>
+                        <a href="https://en.wikipedia.org/wiki/AJAX">Mas informacion</a>
+                    </section>
+                    <section>
+                        <h2>Ajax</h2>
+                        <pre style="font-size: 35px;"><code  class="hljs" data-trim contenteditable>
+var ajax = new XMLHttpRequest();
+ajax.open('get',url);
+ajax.onload=function(){
+}
+ajax.send();
+                        </code></pre>
+                        <a href="http://www.quirksmode.org/js/events_mouse.html">Mas informacion</a>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>TALLER</h1>
+                    </section>
+                    <section>
+                        <h2>Objetivos</h2>
+                        <ul>
+                            <li>REST</li>
+                            <li>SPA</li>
+                            <li>RETOS</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>REST</h2>
+                    </section>
+                    <section data-background-transition="zoom" data-background="img/rest.jpg" data-background-size="90vw">
+                    </section>
+                    <section>
+                        <h2>SPA</h2>
+                    </section>
+                    <section data-background-transition="zoom" data-background="img/spa.jpg" data-background-size="75vw">
+                    </section>
+                    <section>
+                        <h2>RETOS</h2>
+                    </section>
+                    <section>
+                        <h2>JQUERY</h2>
+                    </section>
+                    <section data-background-transition="zoom" data-background="img/jquery.png" data-background-size="75vw">
+                    </section>
+                    <section>
+                        <h2>ANGULARJS</h2>
+                    </section>
+                    <section data-background-transition="zoom" data-background="img/angular.jpg" data-background-size="75vw">
+                    </section>
+                    <section>
+                        <h2>REACTJS</h2>
+                    </section>
+                    <section data-background-transition="zoom" data-background="img/react.png" data-background-size="75vw">
+                    </section>
+                    <section>
+                        <h2>NODEJS</h2>
+                    </section>
+                    <section data-background-transition="zoom" data-background="img/node.jpg" data-background-size="75vw">
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+				]
+			});
+		</script>
+	</body>
+</html>
