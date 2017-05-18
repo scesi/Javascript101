@@ -1,22 +1,22 @@
 var alex = { 
-    "nombre": "alexander marquez de la casa de drones",
-    "edad": 24,
-    "sueldo": "no mucho",
-    "drones":[
+    nombre: "alexander marquez de la casa de drones",
+    edad: 24,
+    sueldo: "no mucho",
+    drones:[
         {
-            "modelo":"QAV250",
-            "tipo":"carrera"
+            modelo:"QAV250",
+            tipo:"carrera"
         },
         {
-            "modelo":"Mavic Pro",
-            "tipo":"Filmacion"
+            modelo:"Mavic Pro",
+            tipo:"Filmacion"
         },
         {
-            "modelo":"Facilona",
-            "tipo":"Juguete"
+            modelo:"Facilona",
+            tipo:"Juguete"
         }
     ]
-};
+};  
 
 function mostrar(){
     console.log(`hola mi nombre es:
