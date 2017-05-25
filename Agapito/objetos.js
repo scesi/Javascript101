@@ -3,6 +3,10 @@ var str = '{"name":"alex", "edad":25}';
 var alex = JSON.parse(str);
 console.log(alex.name);
 
+class Persona{
+    
+}
+
 var alex = { 
     nombre: "alexander marquez de la casa de drones",
     edad: 24,
