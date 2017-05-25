@@ -47,5 +47,6 @@ let emprelados = [{
         salario: 1500
     }
 ];
-empresa = new Empresa("Banana System",emprelados);
-console.log(empresa.salarioMedia());
+//empresa = new Empresa("Banana System",emprelados);
+//console.log(empresa.salarioMedia());
+let json = JSON.stringify(empresa);

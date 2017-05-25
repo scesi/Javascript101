@@ -5,8 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <style>
+        .titulo{
+            color: black;
+        } 
+        .titulo:hover{
+            color: red;
+            font-size: 100px;
+        }
+    </style>
 </head>
 <body>
+    <input id="num1" onfocus="quitare()" type="number">
+    <input id="num2" type="password">
+    <button class="btn" onclick="sumar()" id="asd">Sumar</button>
+    <!--<h1 id="resultado" onmouseover="quitare()" onmouseleave="normal()">La Suma es: </h1>-->
+    <h1 class="titulo">Tocame :)</h1>
+    <script>
+        sumar = function(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            let suma = parseInt(num1)+ parseInt(num2);
+            document.getElementById("resultado").innerHTML =  suma;
+            document.getElementById("num1").setAttribute("type","password");
+            document.getElementsByClassName("btn")[0].removeAttribute("id");
+        }
+        quitare = function(){
+            console.log("no me toques fredo!");
+            document.getElementById("resultado").setAttribute("class","titulo");
+        }
+        normal = function(){
+            document.getElementById("resultado").removeAttribute("class");
+        }
+    </script>
     <script src="Empresa.js"></script>
+
 </body>
 </html>
